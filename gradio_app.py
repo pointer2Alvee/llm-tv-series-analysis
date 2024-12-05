@@ -2,7 +2,6 @@
 
 import gradio as gr
 
-
 def main():
     # Creating rows and cols in UI
     with gr.Blocks() as iface: # initiates gradio blocks
@@ -24,7 +23,8 @@ def main():
                         subtitles_path = gr.Textbox(label="Subtitles or script path")
                         save_path = gr.Textbox(label="Save Path")
                         get_themes_button = gr.Button("Get Themes")
-    
+                        get_themes_button.click(get_themes, inputs=[theme_list,subtitles_path,save_path], outputs=[plot])
+                        
     # launch the interface
     iface.launch(share=True)               
                     
