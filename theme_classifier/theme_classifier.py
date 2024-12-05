@@ -10,8 +10,18 @@ from glob import glob # for file paths
 import pandas as pd # for tabular dataset
 import numpy as np
 
+# we want to go back 1 folder and import from utils, so below libs requried
+import os
+import sys
+import pathlib
     
-    
+# our curr folder path
+folder_path = pathlib.Path(__file__).parent.resolve()
+sys.path.append(os.path.join(folder_path,'../'))
+from utils import load_subtitles_dataset
+
+nltk.download('punkt')
+nltk.download('punkt_tab')
 # all codes from notebook but inside a class
 class ThemeClassifier():
     
@@ -64,3 +74,24 @@ class ThemeClassifier():
         
         # each score below for each theme is a mean of all scores of that theme    
         return themes
+    
+    
+    # RUN get_them_inference() for whole subtitles dataset/ for all episodes
+    def get_themes(self, dataset_path, save_path=None):
+        # Save the processing into some file / path, so need to rerun and use it from this checkpoint
+        
+        # load dataset / FULL DATASET / ALL EPISODES
+        df = load_subtitles_dataset(dataset_path)
+        
+        
+        
+        
+        # run inference / model
+        output_themes = df['script'].apply(self.get_theme_inference)
+        theme_df = pd.DataFrame(output_themes.tolist())
+        df[theme_df.columns] = theme_df
+        
+        
+        # Save output
+        if save_path is not None:
+            df.to_csv(save_path, index=False)
