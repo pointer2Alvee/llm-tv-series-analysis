@@ -13,16 +13,20 @@ def main():
             with gr.Column():
                 gr.HTML("<h1> Theme Classification (Model : zero-shot-classifier)</h1>")
 
-            # OUTPUT 
-            with gr.Row():
-                with gr.Column():
-                    plot = gr.BarPlot()
-                    
-                # INPUT - THEME + SCRIPT + SAVE_PATH
-                with gr.Column():
-                    theme_list = gr.Textbox(label="Themes")
-                    subtitles_path = gr.Textbox(label="Subtitles or script path")
-                    save_path = gr.Textbox(label="Save Path")
+                # OUTPUT 
+                with gr.Row():
+                    with gr.Column():
+                        plot = gr.BarPlot()
+                        
+                    # INPUT - THEME + SCRIPT + SAVE_PATH
+                    with gr.Column():
+                        theme_list = gr.Textbox(label="Themes")
+                        subtitles_path = gr.Textbox(label="Subtitles or script path")
+                        save_path = gr.Textbox(label="Save Path")
+                        get_themes_button = gr.Button("Get Themes")
+    
+    # launch the interface
+    iface.launch(share=True)               
                     
 if __name__ == '__main__':
     main()

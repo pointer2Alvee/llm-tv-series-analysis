@@ -78,6 +78,12 @@ class ThemeClassifier():
     
     # RUN get_them_inference() for whole subtitles dataset/ for all episodes
     def get_themes(self, dataset_path, save_path=None):
+        
+        # read saved output if exists
+        if save_path is not None and os.path.exists(save_path):
+            df = pd.read_csv(save_path)
+            return df
+            
         # Save the processing into some file / path, so need to rerun and use it from this checkpoint
         
         # load dataset / FULL DATASET / ALL EPISODES
