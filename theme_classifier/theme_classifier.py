@@ -79,18 +79,28 @@ class ThemeClassifier():
     # RUN get_them_inference() for whole subtitles dataset/ for all episodes
     def get_themes(self, dataset_path, save_path=None):
         
+        
         # read saved output if exists
-        if save_path is not None and os.path.exists(save_path):
-            df = pd.read_csv(save_path)
-            return df
-            
+        ######################## THIS BELOW CODE GIVES BUG  ##################
+        # if save_path is not None and os.path.exists(save_path):
+        #     df = pd.read_csv(save_path)
+        #     return df
+        #*********************************************************************
+        """
+        Note :- the video did above three lines of code but there is bug
+        BUG : It reads df from saved_path .csv, for in  gradio input themes for first time are : love, hate, self
+        then if i run within these three it runs correctly as these three " love, hate, self" are saved in csv
+        but if i give  love, hate, self, horror, fear IT GIVES ERROR on any new themes. commenting this solves the problem
+        """
+        #######################################################################
+        
+        
+        
         # Save the processing into some file / path, so need to rerun and use it from this checkpoint
         
         # load dataset / FULL DATASET / ALL EPISODES
         df = load_subtitles_dataset(dataset_path)
-        
-        
-        
+        df  = df.head(2)
         
         # run inference / model
         output_themes = df['script'].apply(self.get_theme_inference)
@@ -101,3 +111,5 @@ class ThemeClassifier():
         # Save output
         if save_path is not None:
             df.to_csv(save_path, index=False)
+            
+        return df
