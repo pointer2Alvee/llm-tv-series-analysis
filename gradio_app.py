@@ -84,7 +84,6 @@ def main():
                             title="Series Theme",
                             tooltip=["Theme", "Score"],
                             interactive=True,
-                            horizontal=True,
                             vertical=False,
                             width = 500,
                             height=260,
