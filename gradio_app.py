@@ -51,7 +51,7 @@ def get_themes(theme_list_str,subtitles_path,save_path):
 
 
 # NOT RECOMMENDED AS GLOBAL PANDAS EMPTY DF, BUT WORKING AS OF NOW
-#####################################################
+###################BUG REMAINS ######################
 output_df = pd.DataFrame({
     "Theme": [],
     "Score": []
