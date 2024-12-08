@@ -97,7 +97,7 @@ class ThemeClassifier():
         Note :- the video did above three lines of code but there is bug
         BUG : It reads df from saved_path .csv, for in  gradio input themes for first time are : love, hate, self
         then if i run within these three it runs correctly as these three " love, hate, self" are saved in csv
-        but if i give  love, hate, self, horror, fear IT GIVES ERROR on any new themes. commenting this solves the problem
+        but if i give  love, hate, self, horror,  fear IT GIVES ERROR on any new themes. commenting this solves the problem
         """
         #######################################################################
         
