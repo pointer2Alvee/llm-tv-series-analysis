@@ -83,6 +83,12 @@ class ThemeClassifier():
         
         # read saved output if exists
         ######################## THIS BELOW CODE GIVES BUG  ##################
+        ######################## UPDATE : NOT BUG BUT A FEATURE  #############
+        """
+        uncomment below three lines if you want only specific-number of themes to classify 
+        and no new themes can be classified later after the file is run first time and theme_classification_output.csv is made
+        as it will later read from the .csv file
+        """
         # if save_path is not None and os.path.exists(save_path):
         #     df = pd.read_csv(save_path)
         #     return df
