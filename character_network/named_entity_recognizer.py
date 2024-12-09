@@ -62,6 +62,9 @@ class NamedEntityRecognizer:
         # load dataset
         df = load_subtitles_dataset(dataset_path)
         
+        # TODO : COMMENT THIS TO RUN ON WHOLE DATASET
+        df = df.head(10)
+        
         # Run Inference / Model , nlp_model
         df['ners'] = df['script'].apply(self.get_ners_inference)
 
@@ -69,3 +72,4 @@ class NamedEntityRecognizer:
         if save_path is not None:
             df.to_csv(save_path, index=False)
     
+        return df

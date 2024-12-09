@@ -4,6 +4,10 @@ import gradio as gr
 import pandas as pd
 from theme_classifier import ThemeClassifier
 
+
+# FOR CHAR NET
+from character_network import NamedEntityRecognizer, CharacterNetworkGenerator
+
 def get_themes(theme_list_str,subtitles_path,save_path):
     theme_list = theme_list_str.split(',')
     
@@ -59,13 +63,25 @@ output_df = pd.DataFrame({
 #####################################################
 
 
+## get_character_network
+def get_character_network(subtitles_path, ner_path):
+    ner = NamedEntityRecognizer()
+    ner_df = ner.get_ners(subtitles_path, ner_path)
+    
+    character_network_generator = CharacterNetworkGenerator()
+    relationship_df = character_network_generator.generate_character_network(ner_df)
+    html = character_network_generator.draw_network_graph(relationship_df)
+    
+    return html
+    
 
 def main():
     # Creating rows and cols in UI
     with gr.Blocks() as iface: # initiates gradio blocks
-  
-        # creates row
-        with gr.Row():
+        
+        
+        ### THEME CLASSIFICATION GUI SECTION     
+        with gr.Row():   # creates row
             # creates col inside row
             with gr.Column():
                 gr.HTML("<h1> Theme Classification (Model : zero-shot-classifier)</h1>")
@@ -104,7 +120,36 @@ def main():
                             inputs=[theme_list,subtitles_path,save_path], 
                             outputs=[plot]
                         )
+             
+             
+        ### CHARACTER NETWORK GUI SECTION
+        with gr.Row(): # creates row
+            # creates col inside row
+            with gr.Column():
+                gr.HTML("<h1> Character-Network (Model : en_core_web_trf)</h1>")
+
+                # OUTPUT 
+                with gr.Row():
+                    with gr.Column():
                         
+                        # output will not be a bar plot like prev one, but some html
+                        network_html = gr.HTML()
+                        
+                    # INPUT - THEME + SCRIPT + SAVE_PATH
+                    with gr.Column():
+                        subtitles_path = gr.Textbox(label="Subtitles or script path")
+                        ner_path = gr.Textbox(label="NERs Save path")
+                        get_network_graph_button = gr.Button("Get Character Network")  
+
+                        # we use gradio to vizualize instead of seaborn or matplotlib
+                        
+                        get_network_graph_button.click(
+                            fn=get_character_network, 
+                            inputs=[subtitles_path,ner_path], 
+                            outputs=[network_html]
+                        )
+            
+              
     # launch the interface
     iface.launch(share=True)               
                     

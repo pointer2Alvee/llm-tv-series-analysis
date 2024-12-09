@@ -107,7 +107,9 @@ class ThemeClassifier():
         
         # load dataset / FULL DATASET / ALL EPISODES
         df = load_subtitles_dataset(dataset_path)
-        df  = df.head(2) # remove [:2] to run on whole dataset
+        
+        # TODO : COMMENT THIS TO RUN ON WHOLE DATASET
+        df  = df.head(2)
         
         # run inference / model
         output_themes = df['script'].apply(self.get_theme_inference)
