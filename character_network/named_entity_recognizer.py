@@ -8,9 +8,7 @@ import pathlib
 from ast import literal_eval
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import networkx as nx
-from pyvis.network import Network
+
 
 # For loading dataset
 folder_path = pathlib.Path().parent.resolve()
