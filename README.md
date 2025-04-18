@@ -80,10 +80,10 @@ llm-tv-series-analysis/
 ▫️ Attack type classifier (distilBERT-based)
 ▫️ Chatbot with character personality using fine-tuned LLaMA 3.1
 
-### 🎥 Demo
-<a href="https://youtu.be/Qor8kjsCJkA?si=7d1Mhc0KW4GQb3sF" target="_blank">
+<!--### 🎥 Demo
+ <a href="https://youtu.be/Qor8kjsCJkA?si=7d1Mhc0KW4GQb3sF" target="_blank">
   <img src="https://img.youtube.com/vi/Qor8kjsCJkA/hqdefault.jpg" alt="YouTube Video" width="390" height="270">
-</a>
+</a> -->
 
 ### 🚀 Getting Started
 #### 📚 Knowledge & Skills Required 
