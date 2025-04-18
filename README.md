@@ -6,7 +6,7 @@
 </div>
 
 ## 📜 llm-tv-series-analysis
-#### 🧠 Summary 
+#### 🎯 Summary 
 An NLP/LLM-powered <b>TV-Series-Analysis</b> System for understanding story elements, character relationships, and theme analysis of any TV show. This AI-system relies on robust tech stack including python, pytorch, gradio, scrapy, beautifulsoup4, glob, sklearn, seaborn, pandas, numpy, matplotlib, spacy, networkx, transformer-models, huggingface, nltk, pyvis. Also used two impressive models, spacy's en_core_web_trf for character network & hugging face's facebook/bart-large-mnli for theme classifier. Expertise in  ML/DL, AI engineering, Neural nets, LLMs, Transformer models & web scraping is beneficial for extending or understanding this system.
 
 #### 🧠 Overview
