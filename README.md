@@ -157,22 +157,21 @@ matplotlib
 3. Wait.. 
 4. Open Local Host link in Browser
 
-For Theme-Classifier :- 
-6. provide themes in text field: ```friendship, battle, sacrifice, love, dialogue```
-7. Provide Subtitle Path : ```data\Subtitles```
-8. Provide output Save path : ```stubs\theme_classifier_output.csv```
---> Click "Get Themes" Button
-
+For Theme-Classifier :-
+- provide themes in text field: ```friendship, battle, sacrifice, love, dialogue```
+- Provide Subtitle Path : ```data\Subtitles```
+- Provide output Save path : ```stubs\theme_classifier_output.csv```
+- Click "Get Themes" Button
 
 For Character-Netowrk :-
-9. Provide Subtitle Path : ```data\Subtitles```
-10. Provide output Save path : ```stubs\ner_output.csv```
---> Click "Get Character Network" Button
-  
-On Colab? Use the global URL printed after running this to open the UI in your browser.
+- Provide Subtitle Path : ```data\Subtitles```
+- Provide output Save path : ```stubs\ner_output.csv```
+- Click "Get Character Network" Button
+
+- On Colab? Use the global URL printed after running this to open the UI in your browser.
+
 #### 📖 Usage
 - Open VS Code and run the a bove commands
-
 
 ### 🧪 Sample Topics Implemented
 - ✅ Web Scraping
@@ -185,7 +184,6 @@ On Colab? Use the global URL printed after running this to open the UI in your b
 - [x] Full attack classifier with fine-tuned DistilBERT
 - [ ] Fully interactive character chatbot (LLaMA-based)
 - [ ] Support for other anime/TV series via config
-
 
 ### 🤝 Contributing
 Contributions are welcomed!
