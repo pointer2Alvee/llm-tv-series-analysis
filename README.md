@@ -1,16 +1,32 @@
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="images/1.png" alt="Image 1" style="width: 49%; margin: 10px;">
-  <img src="images/2.png" alt="Image 2" style="width: 49%; margin: 10px;">
+  <img src="images/1.jpg" alt="Image 1" style="width: 49%; margin: 10px;">
+  <img src="images/2.jpg" alt="Image 2" style="width: 49%; margin: 10px;">
 <!--   <img src="images/3.JPG" alt="Image 3" style="width: 25%; margin: 10px;"> -->
 <!--   <img src="images/4.JPG" alt="Image 2" style="width: 33%; margin: 10px;"> -->
 </div>
 
 ## 📜 llm-tv-series-analysis
-#### 🧠 Overview 
-A TV-Series analysis system using NLP/LLM , gradio, hugging face , chatbots
+#### 🧠 Summary 
+An NLP/LLM-powered <b>TV-Series-Analysis</b> System for understanding story elements, character relationships, and theme analysis of any TV show. This AI-system relies on robust tech stack including python, pytorch, gradio, scrapy, beautifulsoup4, glob, sklearn, seaborn, pandas, numpy, matplotlib, spacy, networkx, transformer-models, huggingface, nltk, pyvis. Also used two impressive models, spacy's en_core_web_trf for character network & hugging face's facebook/bart-large-mnli for theme classifier. Expertise in  ML/DL, AI engineering, Neural nets, LLMs, Transformer models & web scraping is beneficial for extending or understanding this system.
+
+#### 🧠 Overview
+A comprehensive system to analyze and visualize any TV series —demonstrated here using "Naruto" tv seies— with a user-friendly interface built using Gradio. The system is structured into three major components. 
+
+<b>(1) Gathering Dataset :</b> where 3-types of dataset requierd. These are subtitle, transcript, classification dataset. The subtitle is collected "subtitlist", the transcript from kaggle and the classification data are scraped from "narutopedia" website using Scrapy and BeautifulSoup tool.  
+
+<b>(2) Theme Classification :</b> basically extracts the main theme of the series. It tells us how much each theme (%) is occurring in the TV-Series provided that we have input themes like (comma separated) : friendship, battle, sacrifice, love, dialogue etc. This is done using zero-shot classifier  by leveraging Hugging Face's "facebook/bart-large-mnli" model to extract theme from the subtitle dataset and lastly
+
+<b> (3) Character Network :</b> shows how big each character is and plot their relationship with each other. This uses SpaCy’s NER (Named-Entity-Recognition) model (en_core_web_trf) to identify and connect character entities in a network visualized via Pyvis.
+
 
 #### 🎯 Use Cases 
-- Implementing 
+- Fandom Analysis & Exploration
+- Content Recommendation & Tagging
+- Scriptwriter & Creator Insights
+- Educational/NLP Research Tool
+- Interactive Dashboards for Viewers
+- Comparative Series Analysis
+- Archiving & Metadata Generation
   
 #### 🟢 Project Status
 - Current Version: V1.0
@@ -56,7 +72,13 @@ llm-tv-series-analysis/
 ```
 
 ### ✨ Features
-- 
+✅ Dataset gathering (subtitles, transcripts, and custom classification sets)
+✅ Zero-shot theme classifier using facebook/bart-large-mnli
+✅ Character relationship network using Named Entity Recognition (en_core_web_trf)
+
+🛠️ In progress:
+▫️ Attack type classifier (distilBERT-based)
+▫️ Chatbot with character personality using fine-tuned LLaMA 3.1
 
 ### 🎥 Demo
 <a href="https://youtu.be/Qor8kjsCJkA?si=7d1Mhc0KW4GQb3sF" target="_blank">
@@ -64,72 +86,105 @@ llm-tv-series-analysis/
 </a>
 
 ### 🚀 Getting Started
-- Knowledge Required : python, linear algebra, probability, statistics, numpy, matplotlib, scikit-learn, pytorch
-
-<!-- ### 🛠️ Hardware Requirements
-- None
--->
+#### 📚 Knowledge & Skills Required 
+- Python programming, Web Scraping 
+- ML/DL fundamentals, Transformers, Hugging Face Hub
+- NLP tools like NLTK and spaCy
+- LLM knowledge for future chatbot development
 
 #### 💻 Software Requirements
 - IDE (VS Code) or jupyter notebook or google colab
-- Python 3
+- Python 3, html, css
   
 #### 🛡️ Tech Stack
-- Python , PyTorch, TorchVision 💻
-- Numpy, Pandas, Matplotlib, Scikit-Learn 🧩
+- Language: python, html, css
+- Web Scraping: scrapy, beautifulsoup4
+- NLP/ML/LLM: transformers, huggingface_hub, nltk, spacy, sklearn, pandas, numpy, networkx, pyvis
+- Deep Learning: pytorch, transformers-models (en_core_web_trf & facebook/bart-large-mnli) 
+- Visualization: matplotlib, seaborn, pyvis.network
+- UI/ML-app: gradio
 
-<!--
-### 🖇️ Schematic
-- none
--->
+
+#### 🔍 Modules Breakdown
+##### 📥 Dataset Collection
+- Subtitle Dataset: Main content used for theme classification and character network.
+- Transcript Dataset: Maps dialogues to speakers, crucial for chatbot.
+- Classification Dataset: Scraped from Naruto Fandom Wiki for training an attack classifier: ninjutsu, genjutsu, and taijutsu.
+. Tools used: scrapy, bs4
+
+##### 🎭 Theme Classifier
+- Model: facebook/bart-large-mnli (Zero-Shot)
+- Input: Subtitle data + custom themes (e.g., friendship, battle, sacrifice)
+- Output: CSV showing theme percentages across the series
+
+##### 🧑‍🤝‍🧑 Character Network
+- NER Model: en_core_web_trf via spaCy
+- Generate interactive network graph using networkx + pyvis
+
+##### 📊 Evaluation
+- Furtue work
 
 #### ⚙️ Installation
 ```
 git clone https://github.com/pointer2Alvee/llm-tv-series-analysis.git
-cd llm-tv-series-analysis-system
+cd tv-series-analyzer
+
+# Recommended: Use a virtual environment
+pip install -r requirements.txt
 ```
 
+##### 🖇️ requirements.txt (core packages):
+```
+scrapy
+beautifulsoup4
+transformers==4.44.0
+huggingface_hub==0.24.5
+nltk==3.8.1
+gradio
+pyvis
+spacy
+torch
+pandas
+numpy
+networkx
+seaborn
+matplotlib
+```
+
+##### 💻 Running the App Locally
+1. Open Repo in VS code
+2. Run Command :  ``` python gradio_app.py ```
+3. Wait.. 
+4. Open Local Host link in Browser
+
+* For Theme-Classifier :- 
+6. provide themes in text field: ```friendship, battle, sacrifice, love, dialogue```
+7. Provide Subtitle Path : ```data\Subtitles```
+8. Provide output Save path : ```stubs\theme_classifier_output.csv```
+--> Click "Get Themes" Button
+
+
+* For Character-Netowrk :-
+9. Provide Subtitle Path : ```data\Subtitles```
+10. Provide output Save path : ```stubs\ner_output.csv```
+--> Click "Get Character Network" Button
+  
+On Colab? Use the global URL printed after running this to open the UI in your browser.
 #### 📖 Usage
-- Open .ipynb files inside each concept or NN architecture directory and
-- Run them to see training/inference steps, plots, and results.
-
-#### 🔍 Contents Breakdown
-##### 📚 Math Foundations
-- Linear Algebra, Calculus, Probability, Statistics
-
-##### 🧱 Neural Network Basics
-- Perceptrons, Layers, Activations, MLPs
-
-
-##### 🔧 Deep Learning Concepts
-- Regularization (Dropout, L2, Data Aug)
-
-
-##### ⚙️ Advanced Architectures
-- CNNs (classic + modern)
-
-
-##### 🏋️‍♂️ Model Training & Tracking
-- Training Loops, Epochs, Batches
-
-
-##### 📊 Evaluation
-- Accuracy, Precision, Recall, F1, AUC-ROC
-
-
-##### 🔬 Research to Practice
-- Paper Implementations → PyTorch Code
+- Open VS Code and run the a bove commands
 
 
 ### 🧪 Sample Topics Implemented
-- ✅ Forward & Backpropagation from scratch
-- ✅ CNN with PyTorch
+- ✅ Web Scraping
+- ✅ BERT model & NER model
+- ✅ Theme Classifier, Character Relationship Network
   
-- ⏳ Upcoming  : nlp, cv, llm, data engineering, feature engineering
+- ⏳ Upcoming  : Chatbot, Text Classifier
 
 ### 🧭 Roadmap
-- [x] Build foundational math notebooks
-- [ ] Implement perceptron → MLP → CNN
+- [x] Full attack classifier with fine-tuned DistilBERT
+- [ ] Fully interactive character chatbot (LLaMA-based)
+- [ ] Support for other anime/TV series via config
 
 
 ### 🤝 Contributing
