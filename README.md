@@ -1,6 +1,6 @@
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="images/1.jpg" alt="Image 1" style="width: 49%; margin: 10px;">
-  <img src="images/2.jpg" alt="Image 2" style="width: 49%; margin: 10px;">
+  <img src="images/1.JPG" alt="Image 1" style="width: 49%; margin: 10px;">
+  <img src="images/2.JPG" alt="Image 2" style="width: 49%; margin: 10px;">
 <!--   <img src="images/3.JPG" alt="Image 3" style="width: 25%; margin: 10px;"> -->
 <!--   <img src="images/4.JPG" alt="Image 2" style="width: 33%; margin: 10px;"> -->
 </div>
@@ -157,14 +157,14 @@ matplotlib
 3. Wait.. 
 4. Open Local Host link in Browser
 
-* For Theme-Classifier :- 
+For Theme-Classifier :- 
 6. provide themes in text field: ```friendship, battle, sacrifice, love, dialogue```
 7. Provide Subtitle Path : ```data\Subtitles```
 8. Provide output Save path : ```stubs\theme_classifier_output.csv```
 --> Click "Get Themes" Button
 
 
-* For Character-Netowrk :-
+For Character-Netowrk :-
 9. Provide Subtitle Path : ```data\Subtitles```
 10. Provide output Save path : ```stubs\ner_output.csv```
 --> Click "Get Character Network" Button
