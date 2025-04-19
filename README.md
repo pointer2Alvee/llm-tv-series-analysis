@@ -82,7 +82,7 @@ llm-tv-series-analysis/
 
 ### 🎥 Demo
  <a href="https://www.youtube.com/shorts/wexIv6X45eE?feature=share" target="_blank">
-  <img src="2_2.jpg" alt="YouTube Video" width="390" height="270">
+  <img src="2_2.JPG" alt="YouTube Video" width="390" height="270">
 </a> 
 
 ### 🚀 Getting Started
