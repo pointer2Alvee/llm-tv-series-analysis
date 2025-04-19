@@ -1,4 +1,4 @@
-episode,script,dialogue,sad,battle,sacrifice,fight,horror,friendship,romance,love,happiness
+episode,script,dialogue,battle,sacrifice,fight,horror,hate,friendship,romance,love
 1,"A long time ago, a powerful demon fox appeared with nine tails.
  With its powerful tails,
  it could smash mountains and create tidal waves.
@@ -301,7 +301,7 @@ episode,script,dialogue,sad,battle,sacrifice,fight,horror,friendship,romance,lov
  If you want it that bad, you're gonna have to beat me first!
  Next episode:  ""My Name Is Konohamaru!""
  Watch my outstanding performance!
-",0.9585430920124054,0.7667847573757172,0.7564093172550201,0.6804322898387909,0.5880893468856812,0.47549718618392944,0.07262781448662281,0.03815004788339138,0.03414119686931372,0.02194690704345703
+",0.9585430920124054,0.7564093172550201,0.6804322898387909,0.5880893468856812,0.47549718618392944,0.2392473816871643,0.07262781448662281,0.03815004788339138,0.03414119686931372
 2,"C'mon!
  Running like a fugitive,
  Being chased by something
@@ -597,4 +597,4 @@ episode,script,dialogue,sad,battle,sacrifice,fight,horror,friendship,romance,lov
  I'm not gonna let him be so cool in front of Sakura!
  Next Episode:  ""Sasuke and Sakura: Friends or Foes?""
  Watch my outstanding performance!
-",0.9606055617332458,0.4805970713496208,0.684843584895134,0.5707015991210938,0.7934874892234802,0.35990647692233324,0.04626080114394426,0.19749608496204019,0.17326102312654257,0.01694381033303216
+",0.9606055617332458,0.684843584895134,0.5707015991210938,0.7934874892234802,0.35990647692233324,0.15400359220802784,0.04626080114394426,0.19749608496204019,0.17326102312654257
