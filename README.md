@@ -159,7 +159,7 @@ matplotlib
 3. Wait.. 
 4. Open Local Host link in Browser
 
-###### For Theme-Classifier :-
+For Theme-Classifier :-
 - provide themes in text field: ```friendship, battle, sacrifice, love, dialogue```
 - Provide Subtitle Path : ```data\Subtitles```
 - Provide output Save path : ```stubs\theme_classifier_output.csv```
