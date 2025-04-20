@@ -1,8 +1,8 @@
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="images/1.JPG" alt="Image 1" style="width: 100%; margin: 10px;">
+  <img src="assets/images/1.JPG" alt="Image 1" style="width: 100%; margin: 10px;">
 </div>
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="images/2.JPG" alt="Image 2" style="width: 100%; margin: 10px;">
+  <img src="assets/images/2.JPG" alt="Image 2" style="width: 100%; margin: 10px;">
 </div>
 
 ## 📜 llm-tv-series-analysis
@@ -35,7 +35,8 @@ A comprehensive system to analyze and visualize any TV series —demonstrated he
 #### 📂 Repository Structure
 ```
 llm-tv-series-analysis/
-├── images/
+├── assets/
+│   └── images/
 ├── crawler/
 │   └── .ass
 ├── data/
