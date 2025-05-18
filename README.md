@@ -68,7 +68,7 @@ llm-tv-series-analysis/
 ├── gradio_app.py
 ├── llm-tv-series-analysis.gdoc
 ├── llm_tv_series_analysis_development.ipynb
-├── requirements.txtx
+├── requirements.txt
 └── README.md
 ```
 
